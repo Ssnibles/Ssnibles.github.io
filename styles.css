@@ -7,120 +7,42 @@
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(-40deg, #161723, #20299c);
+  background-image: linear-gradient(#000000, #12093a, #130744, #1f0e63, #0c0e8a);
   background-size: cover;
   background-position: center;
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   padding: 40px;
-  background: var(--bs-border-color-translucent);
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  background: #ffffff30;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 span {
   position: relative;
   margin: 1rem;
   cursor: pointer;
+  font-size: large;
+  z-index: 1;
 }
 
 span a {
   text-decoration: none;
-  color: #ffffff;
-}
-
-span::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-span:hover::before {
-  transform-origin: bottom left;
-  transform: scaleX(1);
-}
-
-.loader {
-  position: relative;
-}
-
-.outer,
-.middle,
-.inner {
-  border: 2px solid transparent;
-  border-top-color: #ffffff;
-  border-right-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.outer {
-  width: 3.5em;
-  height: 3.5em;
-  margin-left: -1.75em;
-  margin-top: -1.75em;
-  animation: spin 5s linear infinite;
-}
-
-.middle {
-  width: 2.1em;
-  height: 2.1em;
-  margin-left: -1.05em;
-  margin-top: -1.05em;
-  animation: spin 3s linear reverse infinite;
-}
-
-.inner {
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: -0.4em;
-  margin-top: -0.4em;
-  animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  color: rgb(255, 255, 255);
 }
 
 .logo {
   position: relative;
   padding-left: 3rem;
-}
-
-.slide-card {
-  width: 60vh;
-  background-color: rgb(255, 255, 255);
-  margin-top: 40px;
-  padding: 10vh;
-  border-top-right-radius: 3vh;
-  border-bottom-right-radius: 3vh;
-  text-align: center;
-}
-
-.slide-card {
-  animation-name: slide-out;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  }
-
-@keyframes slide-out {
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(0px);}
 }
