@@ -29,6 +29,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.logo {
+  color: white;
+}
+
 span {
   position: relative;
   margin: 1rem;
@@ -42,7 +46,7 @@ span a {
   color: rgb(255, 255, 255);
 }
 
-.logo {
+.container {
   position: relative;
-  padding-left: 3rem;
 }
+
